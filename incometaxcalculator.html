@@ -1,0 +1,163 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,length=device-length,initial-scale=1.0,maximum-scale=1,user-scalability=0" charset="utf-8" >
+
+  <title>Income Tax Calculator </title>
+
+ 
+</head>
+
+
+<script>
+/*
+0% between UGX 0 to UGX 235,000 
+
+10% between UGX 235,001 to UGX 335,000 
+
+20% between UGX 335,001 to UGX 410,000
+
+30% between UGX 410,001 to UGX 10,000,000 
+
+40% above UGX 10,000,000 
+*/
+
+var calculateTax = function() {
+    var income = parseFloat(document.getElementById("income").value);
+    document.getElementById("tax").value = calcTaxes(income);
+    console.log(tax);
+    function calcTaxes(amount){
+    var calculate = 0;
+    if(amount <=235000){
+        tax = (0* amount).toFixed(0);
+        taxPrint ='Tax Payable = UGX ' + tax;
+        salaryaftertax = (income - tax).toFixed(0);
+        salaryaftertaxPrint = "\n" + "\n"+'Income After Tax = UGX ' + salaryaftertax 
+        percentagebracket1 = ((amount*0)).toFixed(0);
+        percentagebracket2 = (2*5).toFixed(0);
+        percentagebracket3 = ((amount*0)+20).toFixed(0);
+        percentagebracket4 = ((amount*0)+30).toFixed(0);
+        percentagebracket5 = ((amount*0)+40).toFixed(0);
+        percentagebracketPrint = "\n" + "\n" +'INCOME TAX RATES'  + "\n"+"\n" + percentagebracket1 + '% between UGX 0 to UGX 235,000 ' + "\n" +"\n" + percentagebracket2 + '% between UGX 235,001 to UGX 335,000 ' + "\n" +"\n" + percentagebracket3 + '% between UGX 335,001 to UGX 410,000' + "\n" +"\n"  + percentagebracket4 + '% between UGX 410,001 to UGX 10,000,000 '+"\n" +"\n" + percentagebracket5 + '% above UGX 10,000,000 ';
+        
+    }
+    else if( amount >235000 && amount <=335000){
+        tax = ((10/100)* amount).toFixed(0);
+        taxPrint = 'Tax Payable = UGX '  + tax;
+        salaryaftertax = (income - tax).toFixed(0);
+        salaryaftertaxPrint = "\n" + "\n"+'Income After Tax = UGX ' + salaryaftertax 
+        percentagebracket1 = ((amount*0)).toFixed(0);
+        percentagebracket2 = (2*5).toFixed(0);
+        percentagebracket3 = ((amount*0)+20).toFixed(0);
+        percentagebracket4 = ((amount*0)+30).toFixed(0);
+        percentagebracket5 = ((amount*0)+40).toFixed(0);
+        percentagebracketPrint = "\n" + "\n" +'INCOME TAX RATES'  + "\n"+"\n" + percentagebracket1 + '% between UGX 0 to UGX 235,000 ' + "\n" +"\n" + percentagebracket2 + '% between UGX 235,001 to UGX 335,000 ' + "\n" +"\n" + percentagebracket3 + '% between UGX 335,001 to UGX 410,000' + "\n" +"\n"  + percentagebracket4 + '% between UGX 410,001 to UGX 10,000,000 '+"\n" +"\n" + percentagebracket5 + '% above UGX 10,000,000 ';
+        
+    }
+    else if( amount >335000 && amount <=410000){
+      tax = ((20/100)* amount).toFixed(0);
+      taxPrint = 'Tax Payable = UGX '  + tax;
+      salaryaftertax = (income - tax).toFixed(0);
+      salaryaftertaxPrint = "\n" + "\n"+'Income After Tax = UGX ' + salaryaftertax 
+      percentagebracket1 = ((amount*0)).toFixed(0);
+      percentagebracket2 = (2*5).toFixed(0);
+      percentagebracket3 = ((amount*0)+20).toFixed(0);
+      percentagebracket4 = ((amount*0)+30).toFixed(0);
+      percentagebracket5 = ((amount*0)+40).toFixed(0);
+      percentagebracketPrint = "\n" + "\n" +'INCOME TAX RATES'  + "\n"+"\n" + percentagebracket1 + '% between UGX 0 to UGX 235,000 ' + "\n" +"\n" + percentagebracket2 + '% between UGX 235,001 to UGX 335,000 ' + "\n" +"\n" + percentagebracket3 + '% between UGX 335,001 to UGX 410,000' + "\n" +"\n"  + percentagebracket4 + '% between UGX 410,001 to UGX 10,000,000 '+"\n" +"\n" + percentagebracket5 + '% above UGX 10,000,000 ';
+      
+    }
+    else if( amount >410000 && amount <=10000000){
+      tax = ((30/100)* amount).toFixed(0);
+      taxPrint = 'Tax Payable = UGX '  + tax;
+      salaryaftertax = (income - tax).toFixed(0);
+      salaryaftertaxPrint = "\n" + "\n"+'Income After Tax = UGX ' + salaryaftertax 
+      percentagebracket1 = ((amount*0)).toFixed(0);
+      percentagebracket2 = (2*5).toFixed(0);
+      percentagebracket3 = ((amount*0)+20).toFixed(0);
+      percentagebracket4 = ((amount*0)+30).toFixed(0);
+      percentagebracket5 = ((amount*0)+40).toFixed(0);
+      percentagebracketPrint = "\n" + "\n" +'INCOME TAX RATES'  + "\n"+"\n" + percentagebracket1 + '% between UGX 0 to UGX 235,000 ' + "\n" +"\n" + percentagebracket2 + '% between UGX 235,001 to UGX 335,000 ' + "\n" +"\n" + percentagebracket3 + '% between UGX 335,001 to UGX 410,000' + "\n" +"\n"  + percentagebracket4 + '% between UGX 410,001 to UGX 10,000,000 '+"\n" +"\n" + percentagebracket5 + '% above UGX 10,000,000 ';
+    }
+    else if( amount >10000000){
+      tax = ((40/100)* amount).toFixed(0);
+      taxPrint = 'Tax Payable = UGX '  + tax;
+      salaryaftertax = (income - tax).toFixed(0);
+      salaryaftertaxPrint = "\n" + "\n"+'Income After Tax = UGX ' + salaryaftertax 
+      percentagebracket1 = ((amount*0)).toFixed(0);
+      percentagebracket2 = (2*5).toFixed(0);
+      percentagebracket3 = ((amount*0)+20).toFixed(0);
+      percentagebracket4 = ((amount*0)+30).toFixed(0);
+      percentagebracket5 = ((amount*0)+40).toFixed(0);
+      percentagebracketPrint = "\n" + "\n" +'INCOME TAX RATES'  + "\n"+"\n" + percentagebracket1 + '% between UGX 0 to UGX 235,000 ' + "\n" +"\n" + percentagebracket2 + '% between UGX 235,001 to UGX 335,000 ' + "\n" +"\n" + percentagebracket3 + '% between UGX 335,001 to UGX 410,000' + "\n" +"\n"  + percentagebracket4 + '% between UGX 410,001 to UGX 10,000,000 '+"\n" +"\n" + percentagebracket5 + '% above UGX 10,000,000 ';
+     
+    }
+      else {
+      taxPrint ="\n" +'n/a';
+      salaryaftertaxPrint ="\n" +' n/a';
+      percentagebracketPrint ="\n" +' n/a'
+     
+    }
+    return [taxPrint, salaryaftertaxPrint, percentagebracketPrint];
+  }}
+  
+  window.onload = function () {
+    document.getElementById("calculate").onclick = calculateTax;
+  }
+  
+  </script>
+
+<style>
+	body {
+  overflow: hidden;
+    font-family: serif;
+    font-size:21px;
+    line-height: 1;
+    
+    background-color:rgb(241, 239, 239);
+    color: #000000;
+    margin: 50px auto 100px auto;
+    width: 900px;
+    height: 100px;
+    
+    
+  }
+  
+  header {
+    margin: 0 0 40px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  
+  section {
+    width: 900px;
+    height: 600px;
+    position: relative;
+    text-align: center;
+  }
+  
+  
+  #tax {
+      font-family: serif;
+      font-size:20px;
+      background-color: rgb(241, 149, 192);
+  }
+  
+</style>
+
+<body >
+	<header>INCOME TAX CALCULATOR</header>
+
+<section>
+    <label>Enter income:</label>
+    <br><br>
+    <label> UGX </label><input type="text" style="background-color:rgb(241, 149, 192)" id = "income" />
+    <br><br>
+    <input type="button" value="Calculate" name="calculate" id = "calculate" />
+    <br><br>
+  <label>Tax Breakdown:</label>
+    <br><br>
+  <textarea readonly name="text" rows="15" cols="70" wrap="soft" id="tax"></textarea>
+</section>
+</body>
+<html>
